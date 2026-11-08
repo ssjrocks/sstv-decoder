@@ -1,0 +1,19 @@
+[project]
+name = "sstv-decoder"
+version = "0.1.0"
+description = "Decodes slow-scan TV (SSTV) pictures from any audio playing on an Ubuntu desktop"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "pyqt6>=6.7",
+]
+
+[project.scripts]
+sstv-decoder = "sstv_decoder.main:main"
+sstv-synth = "sstv_decoder.synth:main"
+
+[build-system]
+requires = ["uv_build>=0.8,<0.13.0"]
+build-backend = "uv_build"
