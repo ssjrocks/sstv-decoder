@@ -68,7 +68,8 @@ if shot:
     win.grab().save(shot)
 saved = sorted(p.name for p in pics.glob("*.png"))
 print("saved:", saved, "gallery:", win.gallery.count())
-ok = (len(saved) == 2 and saved[0].endswith("_Robot36.png") and saved[1].endswith("_MartinM2.png")
-      and win.gallery.count() == 2)
+# Both can be saved within the same second, so don't rely on name order.
+modes = sorted(name.rsplit("_", 1)[1] for name in saved)
+ok = modes == ["MartinM2.png", "Robot36.png"] and win.gallery.count() == 2
 print("PASS" if ok else "FAIL")
 sys.exit(0 if ok else 1)
