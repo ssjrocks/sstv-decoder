@@ -5,7 +5,7 @@ browser, an SDR program, a radio on line-in. Nothing has to be routed: it record
 monitor through PipeWire, so you still hear the audio as normal. Pictures are saved as PNG files in
 `~/Pictures/SSTV`.
 
-The companion of [Morse Decoder](../morse-decoder), built the same way.
+The companion of [Morse Decoder](https://github.com/ssjrocks/morse-decoder), built the same way.
 
 ## Modes
 
